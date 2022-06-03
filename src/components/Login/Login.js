@@ -20,7 +20,13 @@ function Login() {
     e.preventDefault();
     let toReq = 'https://my-project-kitcoek.herokuapp.com/loginDetails/' + PRN;
 
-    Axios.get(toReq).then((response) => {
+    const headers = {
+      'Content-Type':'application/json',
+      'Access-Control-Allow-origin': '*'
+    }
+    Axios.get(toReq, {
+      headers : headers
+    }).then((response) => {
       const name = response.data[0].name;
       const type = response.data[0].type;
       if (password == response.data[0].password) {
