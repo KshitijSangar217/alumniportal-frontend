@@ -22,7 +22,7 @@ function ViewInternships() {
 
     useEffect(() => {
         
-        let toReq = 'https://my-project-kitcoek.herokuapp.com/getInternships/' + 'all/' + 'all';
+        let toReq = 'http://localhost:3001/getInternships/' + 'all/' + 'all';
         console.log("1" + toReq);
         Axios.get(toReq).then((response) => {
             const someList = response.data;
@@ -43,7 +43,7 @@ function ViewInternships() {
         console.log("applyFilter")
         e.preventDefault();
 
-        let toReq = 'https://my-project-kitcoek.herokuapp.com/getInternships/' + filter + '/' + value;
+        let toReq = 'http://localhost:3001/getInternships/' + filter + '/' + value;
         console.log(toReq);
 
         Axios.get(toReq).then((response) => {

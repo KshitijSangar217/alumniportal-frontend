@@ -25,7 +25,7 @@ function AddCoordinator() {
             'Content-Type':'application/json'
         }
 
-        Axios.post('https://my-project-kitcoek.herokuapp.com/addCoordinator', obj, {
+        Axios.post('http://localhost:3001/addCoordinator', obj, {
             headers : headers
         }).then(() => {
             document.getElementById('result').innerHTML = "Successfully added Coordinator";

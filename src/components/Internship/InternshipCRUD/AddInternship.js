@@ -46,7 +46,7 @@ function AddInternship() {
       'Content-Type': 'application/json'
     }
 
-    Axios.post('https://my-project-kitcoek.herokuapp.com/addInternship', obj, {
+    Axios.post('http://localhost:3001/addInternship', obj, {
       headers: headers
     }).then((response) => {
       toast({

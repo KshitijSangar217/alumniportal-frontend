@@ -11,7 +11,7 @@ function RemoveStudent() {
 
     const removeStud = (e) => {
         e.preventDefault();
-        let toReq = 'https://my-project-kitcoek.herokuapp.com/removeStudent/' + PRN;
+        let toReq = 'http://localhost:3001/removeStudent/' + PRN;
 
         Axios.delete(toReq).then((response) => {
             document.getElementById('resultdiv').innerHTML = "Deleted Student";

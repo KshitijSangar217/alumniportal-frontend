@@ -45,7 +45,7 @@ function AddJob() {
             'Content-Type': 'application/json'
         }
 
-        Axios.post('https://my-project-kitcoek.herokuapp.com/addJob', obj, {
+        Axios.post('http://localhost:3001/addJob', obj, {
             headers: headers
         }).then((response) => {
             toast({

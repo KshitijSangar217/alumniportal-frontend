@@ -44,7 +44,7 @@ function AskDoubt() {
             'Content-Type': 'application/json'
         }
     
-        Axios.post('https://my-project-kitcoek.herokuapp.com/askDoubt', obj, {
+        Axios.post('http://localhost:3001/askDoubt', obj, {
             headers: headers
         }).then(async (response) => {
             toast({

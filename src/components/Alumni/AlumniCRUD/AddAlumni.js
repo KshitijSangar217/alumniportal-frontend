@@ -37,7 +37,7 @@ function AddAlumni() {
                 'Content-Type':'application/json'
             }
 
-            axios.post('https://my-project-kitcoek.herokuapp.com/addAlumni', obj, {
+            axios.post('http://localhost:3001/addAlumni', obj, {
                 headers : headers
             }).then(() => {
                 toast({

@@ -9,7 +9,7 @@ function ViewCoordinator() {
     let navigate = useNavigate();
 
     useEffect(() => {
-        Axios.get('https://my-project-kitcoek.herokuapp.com/getCoordinator').then((response) => {
+        Axios.get('http://localhost:3001/getCoordinator').then((response) => {
             const someList = response.data;
             setCoordinatorList(someList);
             console.log(coordinatorList);

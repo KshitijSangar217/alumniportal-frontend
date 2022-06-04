@@ -22,21 +22,21 @@ function TransferStudentToAlumni() {
 
     const transferStud = (e) => {
         e.preventDefault();
-        let toReq1 = 'https://my-project-kitcoek.herokuapp.com/loginDetails/' + PRN;
+        let toReq1 = 'http://localhost:3001/loginDetails/' + PRN;
         Axios.get(toReq1).then((response) => {
             console.log(response.data[0].name);
             setName(response.data[0].name);
         });
         console.log(name);
 
-        let toReq = 'https://my-project-kitcoek.herokuapp.com/transferStudent/' + PRN;
+        let toReq = 'http://localhost:3001/transferStudent/' + PRN;
 
         Axios.put(toReq).then((response) => {
             document.getElementById('resultdiv').innerHTML = "Student transferred";
             document.getElementById('resultdiv').style.color = "red";
         });
 
-        let toReqdel = 'https://my-project-kitcoek.herokuapp.com/removeStudent/' + PRN;
+        let toReqdel = 'http://localhost:3001/removeStudent/' + PRN;
 
         Axios.delete(toReqdel).then((response) => {
         });
@@ -50,7 +50,7 @@ function TransferStudentToAlumni() {
             'Content-Type': 'application/json'
         }
 
-        Axios.post('https://my-project-kitcoek.herokuapp.com/addAlumni', obj, {
+        Axios.post('http://localhost:3001/addAlumni', obj, {
             headers: headers
         }).then(() => {
         });

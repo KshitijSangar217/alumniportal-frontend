@@ -13,7 +13,7 @@ function RemoveAlumni() {
 
     const removeAlumni = (e) => {
         e.preventDefault();
-        let toReq = 'https://my-project-kitcoek.herokuapp.com/removeAlumni/' + PRN;
+        let toReq = 'http://localhost:3001/removeAlumni/' + PRN;
 
         Axios.delete(toReq).then((response) => {
             document.getElementById('resultdiv').innerHTML = "Deleted Alumni";

@@ -16,7 +16,7 @@ function UpdateCoordinatorProfile() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    let toReq = 'https://my-project-kitcoek.herokuapp.com/updateCoordinatorDetail/';
+    let toReq = 'http://localhost:3001/updateCoordinatorDetail/';
     let obj = {
       PRN: localStorage.getItem("PRN"),
       name: name,

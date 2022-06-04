@@ -26,7 +26,7 @@ function UpdateStudentProfile() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    let toReq = 'https://my-project-kitcoek.herokuapp.com/updateStudentDetail/';
+    let toReq = 'http://localhost:3001/updateStudentDetail/';
     let obj = {
       PRN: localStorage.getItem("PRN"),
       name: localStorage.getItem("Name"),
